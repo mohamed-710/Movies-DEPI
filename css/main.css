@@ -1,0 +1,270 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #000000f2;
+  color: #bfc1c8;
+  overflow-x: hidden;
+}
+
+.header {
+  padding: 50px 0;
+  border-bottom: 2px solid #212529;
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+h1 {
+  font-weight: 500;
+  color: #fff;
+}
+
+.M {
+  color: #Dc3545;
+  font-weight: bold;
+}
+
+.N {
+  color: #0DCAF0;
+  font-weight: bold;
+}
+
+#userSerach {
+  border: none;
+  border-radius: 50rem;
+  background-color: #1e202b;
+  color: #bfc1c8; 
+  transition: box-shadow 0.4s ease-in-out;
+}
+
+.form-control::placeholder {
+  color: #bfbfbf;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+#userSerach:focus {
+  background-color: #1e202b;
+  box-shadow: 0 0 0 0.25rem #d8006c; 
+}
+
+.main-content {
+  padding: 3rem 0;
+}
+
+.movies h3 {
+  text-align: center;
+  color: #d8006c;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+}
+
+.movie-item {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden; 
+  border-radius: 10px; 
+}
+
+.movie-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.movie-item:hover {
+  transform: scale(1.05);
+}
+
+.movie-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.movie-item:hover .movie-details {
+  opacity: 1;
+}
+
+.movie-details img {
+  width: 70%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.movie-details p {
+  font-size: 14px;
+  margin: 5px 0; 
+}
+
+.movie-details h4 {
+  margin: 10px 0;
+}
+
+.play-button {
+  background-color: transparent;
+  border: 2px solid #0dcaf0;
+  color: #0dcaf0;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  margin-top: 10px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.movie-item:hover .play-button {
+  opacity: 1; 
+}
+
+.play-button:hover {
+  background-color: #0dcaf0;
+  color: #fff;
+}
+
+#menu {
+  z-index: 150;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 250px;
+  transition: 0.7s;
+  background-color: #1e202b;
+}
+#menu ul li {
+  position: relative;
+  height: 50px; 
+  transition: 0.5;
+}
+#menu li a{
+  position: absolute;
+  opacity: 1;
+  top:30%;
+  cursor: pointer;
+}
+.icon-contact
+{
+  position: absolute;
+  top: 83%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.copyRight{
+
+  transition: 0.2s;
+}
+#menu a:hover,
+.icon-contact i:hover, 
+.copyRight:hover{
+  color: #d8006c !important;
+}
+#menu a, #menu i{
+  transition: 0.3s;
+}
+
+
+.arrow{
+  background-color: #d8006c;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 5%;
+  right: 1.5%;
+  z-index: 106844;
+  transition: 0.3s;
+}
+.arrow:hover{
+  transform: scale(1.3);
+  box-shadow: 0 0 30px #d8006c;
+}
+
+.row span{
+  color:#d8006c
+}
+.row span i{
+  color :seagreen;
+}
+#toggle-password {
+
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    cursor: pointer;
+}
+#input input{
+  border:none;
+  border-radius: 50rem;
+  background-color: #1e202b;
+  transition:box-shadow 0.4s ease-in-out;
+  color:#bfbfbf
+}
+
+.row input:focus {
+  background-color: #1e202b;
+  box-shadow: 0 0 0 0.25rem #d8006c; 
+  outline: none;
+}
+.main-text{
+  text-align: center;
+  color: #d8006c;
+} 
+.main-btn
+{
+  background: #d8006c;
+  border:none;
+  transition: 0.4s;
+  padding: 10px;
+  margin: 10px;
+  width: 150px;
+
+}
+.main-btn:hover{
+  transform: scale(1.3);
+  box-shadow: 0 0 30px #d8006c;
+}
+
+/*-----------Custome scrollbar-----------*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#d8006c,#0dcaf0);
+  border-radius: 20px;
+  height: 250px;
+
+}
+::-webkit-scrollbar-track {
+  background: none;
+}

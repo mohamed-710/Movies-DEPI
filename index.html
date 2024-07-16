@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <title>Movies DEPI</title>
+</head>
+
+<body>
+
+  
+  <button class="arrow d-none" id="btn-control">
+    <i class="fa fa-solid fa-arrow-alt-circle-up fa-2x text-white"></i>
+  </button>
+  <nav class="header" id="home">
+    <div class="container">
+      <div class="header-content  flex-md-row ">
+        <h1 class="me-3 mb-md-0"><span class="M">M</span>ovies<span class="N">N</span>ews</h1>
+        <div class="search-box position-relative w-50">
+          <input type="text" id="userSerach" class=" form-control" placeholder="Get movies..">
+          <i class="fa fa-search search-icon"></i>
+        </div>
+        <i class="fa-solid fa-bars fa-2x text-white-50 translate make-pointer" id="control-menu"></i>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container main-content">
+    <section class="movies">
+      <h3 class="fs-1 defaultCategory">New Playing</h3>
+      <hr class="border-dark">
+      <div class="movie-grid" id="movieGrid">
+      </div>
+      </div>
+    </section>
+  </main>
+  <hr class="border-dark">
+
+  <section class="Contact py-5 " id="contact">
+    <h3 class="main-text text-center fs-1 mb-5">Contact Us</h3>
+    <form class="row">
+      <div class="col-md-6 m-auto "id="input">
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Name" id="name" onkeyup="validateName()">
+              <span id="name-error"></span>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Email" id="email" onkeyup="validateEmail()">
+              <span id="email-error"></span>
+            </div>
+            <div class="mb-3">
+              <input type="tel" class="form-control" placeholder="Phone" id="phone" onkeyup="validatePhone()">
+              <span id="phone-error"></span>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="age" id="age" onkeyup="validateAge()">
+              <span id="age-error"></span>
+            </div>
+            <div class="mb-3 position-relative">
+              <input type="password" class="form-control " placeholder="password" id="password" onkeyup="validatePassword()">
+              <span id="password-error"></span>
+              <i class="fa fa-eye" id="toggle-password"></i>
+            </div>
+            <div class="mb-3">
+              <input type="password" class="form-control " placeholder="Validate your password" id="passwordConfirm" onkeyup="validateConfirmPassword()"> 
+              <span id="errorMatch"></span>
+            </div>
+            <button class="main-btn rounded" onclick=" return validateForm()">Submit </button>
+            <span id="registration"></span>
+          </div>
+          </form>
+  <div id="menu" class="position-fixed custome-bg text-white-50 p-3 d-flex flex-column justify-content-between">
+    <div class="mt-5">
+      <ul class="list-unstyled">
+        <li class="fs-3">
+          <a id="/movie/now_playing">Now playing</a>
+        </li>
+        <li class="fs-3">
+          <a id="/movie/popular">Popular</a>
+        </li>
+        <li class="fs-3">
+          <a id="/movie/top_rated">Top Rated</a>
+        </li>
+        <li class=" fs-3">
+          <a id="/trending/all/week">Trending</a>
+        </li>
+        <li class=" fs-3">
+          <a id="/movie/upcoming">Upcoming</a>
+        </li>
+        <li class=" fs-3">
+          <span>
+            <a href="#contact" class="text-white-50 text-decoration-none">Contact Us</a>
+          </span>
+        </li>
+      </ul>
+    </div>
+    <div class="icon-contact">
+      <div class="mb-3">
+        <i class="fa-brands fa-facebook-f text-white me-2"></i>
+        <i class="fa-brands fa-twitter text-white me-2"></i>
+        <i class="fa-solid fa-globe text-white"></i>
+      </div>
+    </div>
+    <div class="copyRight">
+      Copyright © 2022 All Rights Reserved.
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+
+
+</body>
+
+</html>
